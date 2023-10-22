@@ -1,13 +1,185 @@
-body {
+* {
+  background-color: var(--primary-color);
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --secondary-color: rgb(16, 16, 16);
+  --primary-image : "./night-mode-url";
+}
+
+.dark-theme {
+  --primary-image : "./light-mode-url";
+  --primary-color: rgb(16, 16, 16);
+  --secondary-color: rgb(239, 225, 225);
+}
+
+
+body {
+  background-color: var(--primary-color);
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 0px;
+}
+
+
+.specific-Card-joke{
+  background-color: #00ADB5;
+  position: relative;
+  width: 275px;
+  animation: slidein;
+  height: 300px;
+  margin: 5px;
+  margin-top: 25px;
+  border-radius: 10%;
+  text-align: center;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  transition: all 1s ease;
+  box-shadow: 6px 6px 5px var(--secondary-color);
+}
+
+.specific-Card-quote .content {
+  transform: rotateY(180deg);
+}
+
+.specific-Card-quote .author {
+  transform: rotateY(180deg);
+}
+
+.specific-Card-quote .liked {
+  left: 10%;
+  transform: rotateY(180deg);
+}
+
+.specific-Card-quote {
+  background-color: #00ADB5;
+  position: relative;
+  width: 275px;
+  height: 300px;
+  margin: 5px;
+  margin-top: 25px;
+  border-radius: 10%;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  text-align: center;
+  transition: all 1s ease;
+  box-shadow: 6px 6px 5px var(--secondary-color);
+}
+
+.specific-Card-joke:hover{
+  cursor: pointer;
+}
+
+.specific-Card-quote:hover{
+  cursor: pointer;
+}
+
+.heading {
+  color: var(--secondary-color);
+  font-weight: bold;
+  margin: 5px;
+  text-align: center;
+  font-size: 60px;
+}
+
+.navbar {
+  display: grid;
+  margin: 0;
+  grid-template-columns: 4fr 0.3fr 0.3fr 0.3fr;
+  align-items: center;
+}
+
+.btn,
+.btn-primary {
+  display: inline;
+  font-weight: bold;
+  color: var(--secondary-color);
+  font-size: 25px;
+  border-radius: 10%;
+  justify-content: end;
+  margin-left: 30px;
+  margin-right: 30px;
+  cursor: pointer;
+  border: 0;
+}
+
+.type {
+  display: inline;
+  margin-top: 7px;
+  color: black;
+  background-color: #00ADB5;
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.setup {
+  text-align: center;
+  margin-left: 5px;
+  background-color: #00ADB5;
+  margin-right: 5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.punchline {
+  text-align: center;
+  background-color: #00ADB5;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+
+.content {
+  background-color: #00ADB5;
+  margin-top: 5%;
+  margin-left: 3%;
+  margin-right: 3%;
+  font-size: 18px;
+}
+
+.author {
+  background-color: #00ADB5;
+  margin-top: 3px;
+  margin-left: 3%;
+  margin-right: 3%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.liked {
+  cursor: pointer;
+  border: 0;
+  background-color: #00ADB5;
+  color: red;
+  position: absolute;
+  font-size: 30px;
+  left: 78%;
+  top: 80%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn:hover,
+.btn-primary:hover {
+  color: orangered;
+}
+
+
+#icon {
+  src: var(--primary-image);
+  width: 30px;
+  cursor: pointer;
+  background-color: var(--primary-color);
 }
